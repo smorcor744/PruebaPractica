@@ -41,6 +41,7 @@ fun SecondBody(navController: NavController, modifier: Modifier, nombre: String,
             fontSize = 25.sp,
             text = nif ?: "No hay datos recibidos"
         )
+        // Cuando se pulsa te lleva a la primera pantalla
         Button(
             onClick = { navController.popBackStack() }
         ) {
@@ -50,7 +51,7 @@ fun SecondBody(navController: NavController, modifier: Modifier, nombre: String,
     }
 }
 
-
+// Formateo un poco los valores y compruebo si son null o estan vacios
 fun validarNombre(text: String?): String? {
     if (text != null && text.isNotBlank() ) {
         val texto = text.replace("(","").replace(" )","")
@@ -64,6 +65,7 @@ fun validarNombre(text: String?): String? {
     return null
 }
 
+// Formateo un poco los valores y compruebo si son null o estan vacios
 fun validarDni(text: String?): String? {
     if (text != null && text.isNotBlank() ) {
         val texto = text.replace("(","").replace(" )","")

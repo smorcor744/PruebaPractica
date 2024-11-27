@@ -75,6 +75,7 @@ fun FirstBody(navController: NavController, modifier: Modifier){
                 modifier = Modifier.fillMaxWidth(),
                 label = { Text("Escribe tu DNI.") }
             )
+            // Cuando se pulsa te lleva a la segunda pantalla con los valores que hayas puesto en los textField
             Button(
                 onClick = { navController.navigate(route = AppScreen.SecondScreen.route + "/$list") }
             ) {
