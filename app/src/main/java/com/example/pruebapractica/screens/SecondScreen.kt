@@ -69,7 +69,7 @@ fun validarDni(text: String?): String? {
         val texto = text.replace("(","").replace(" )","")
 
         if (texto != "") {
-            return "Se a Registrado correctamente con su DNI: $texto"
+            return "Se a Registrado correctamente con su DNI: ${texto.replace(")","")}"
         }
     } else {
         return null
